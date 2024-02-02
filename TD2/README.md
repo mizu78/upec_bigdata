@@ -1,5 +1,6 @@
 # TD2: HADOOP and other Apache projects (Pig/Hive)
-[toc]
+
+The questions for this LAB is put at the end: [EXERCISE](#exercise)
 
 ## !!! Download & install before the course !!! : 
 ### 1. Download 
