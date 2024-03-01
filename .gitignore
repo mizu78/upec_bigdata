@@ -34,3 +34,4 @@ yarn.lock
 
 # Ignore extracted files
 data/ml-100k/*
+*/solution/*
