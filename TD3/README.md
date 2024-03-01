@@ -12,7 +12,23 @@
 
 
 ## Part 1: Apache Hive
+Take a look back at TD2 to get familiar with HDP platform interface. 
 
+In Ambari dash, switch to Hive View, and do the following: 
+
+#### Q1 -  Upload data file: Go to `Upload Table`, upload `u.data` to Hive as `ratings` table.
+    - Which is the separator of this file?  
+#### Q2 - Upload data file: upload `u.item` to Hive as `names` table. 
+    - Which is the separator of this file? How do you handle it using the Interface? 
+    - What is the equivalent HiveQL to load this file `u.item`?
+
+#### Q3 - In the `Query` tab, do the following actions and put in the report the script for: 
+    - Create a view named `topMovieIDs` from `ratings` and `names`.
+    - Show the name of topMovieIDs 
+    
+#### Q4 - Using the AVG() function for aggregating data: 
+    - Find the movie with highest average rating
+    - [Bonus] Only consider movies with at least 10 ratings.
 
 
 
@@ -46,8 +62,8 @@
 - Requirements: 
     - Number of friends per age
     - Who has the most number of friends ?
-    - Regroup ages to age group of 5. For example: [0-5], [6-10], [11-15], ..., [60-65],...
-        - Number of friends per age group. 
+    - Regroup ages to age group of 5, and name this new column `age_group`. For example: [0-5], [6-10], [11-15], ..., [60-65],...
+        - Number of friends per `age_group`. 
 
 
 ### Exercise 4: Tweets analysis: 
