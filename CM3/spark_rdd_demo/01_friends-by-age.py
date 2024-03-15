@@ -16,5 +16,3 @@ averagesByAge = totalsByAge.mapValues(lambda x: x[0] / x[1])
 results = averagesByAge.collect()
 for result in results:
     print(result)
-
-
