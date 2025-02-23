@@ -25,6 +25,8 @@ credentials.json
 # Ignore compiled binaries or executables
 *.exe
 *.dll
+!hadoop.dll
+!winutils.exe
 *.so
 *.dylib
 
