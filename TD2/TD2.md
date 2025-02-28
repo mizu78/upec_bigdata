@@ -88,7 +88,7 @@ Now your client is almost set. We will move to the code and LAB part, in which y
 
 ---
 
-## LAB SESSION
+## LAB SESSION 2
 
 ### 0. Prerequisite
 #### > 0.1. Create a config file named `client.properties` in your working directory with the following content: 
@@ -136,7 +136,7 @@ Run the producer and take a look at your Confluent console, you'll see the first
 |------------|
 | Fill in this chunk of code so that we can send to Kafka cluster a data about the position of the bus, with the following information: <ul><li>`bus_id`</li><li>`longitude`</li><li>`latitude`</li></ul> <br> The data sent to cluster must in JSON format.|
 
-Once you’ve done this right, you can find in the Confluent UI your first sucessfully sent message.
+Once you've done this right, you can find in the Confluent UI your first sucessfully sent message.
 
 
 | _Question 2_ |
@@ -157,10 +157,32 @@ The Kafka Consumer can be created using the template in `TD2/samples/consumer.py
 |------------|
 |<ul><li>Subscribe to the topic using `subscribe` function of `Consumer` class </li><li>Once having subscribed to the topic, get new records by using `poll` function</li> <li>Set poll timeout parameter to be 1 second.</li><li>Run the consumer to get the message and print it to the console.</li></ul>|
 
+### 3. Create a synthetic stream data
+
+#### Context
+A website logged all activities of its users to a log file, with the following fields: 
+- timestamp
+- user id 
+- action 
+- page
+
+In this lab, we will try to generate a synthetic log file ("fake" log file) using Python/R (or any programming language that you're comfortable with).
+
+Once being familiar with the log file generation, we apply the same logic to simulate a streaming data flow ingested by Kafka.
+
+
+| _Question 5_ |
+|------------|
+|Generate a synthetic log file: <ul><li> timestamp — randomly generated timestamp, with the increasing order (for eg: 2023-10-27 03:53:49.989812, 2023-10-27 03:55:01.190249, ...)</li><li>user id — can be generated using `str(uuid.uuid4())` in Python package uuid. A user can do different actions and go to different pages.</li><li>action — action can be selected in a pre-defined set of actions (for example: download, go to, close,...)</li><li>page — set of pages of the website (for example: home, about, content1, content2, prod- uct1, product2,...)
+Some remarks: <ul><li>Use the `random` or similar functions/packages to generate the synthetic data, in which we try to mimic the user's behavior of a website.| ---
+
+| _Question 6_ |
+|------------|
+|Simulate a Kafka stream using the same logic as in Exercise 1: <ul><li>1. Create new Kafka topic in your Kafka cluster, name it as "log web" </li><li>2. Write Kafka producer, in which it will create a data stream with the same content of log as described in Exercise 1, then push this data stream to the topic "log web"</li><li>3. Write Kafka consumer, to consume the messages, and do the small computation to show some statistics of the data stream:</li><ul><li> Number of message received</li><li>Number of visitors</li><li>Average duration that a visitor stays at the web page (timestamp of 'home' - timestamp of 'close')| ---
 
 
 
----
+
 
 ## 💰 Monitoring Billing and Payment
 Your Billing and Payment section: https://confluent.cloud/settings/billing/invoice
