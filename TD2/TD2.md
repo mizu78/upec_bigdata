@@ -1,4 +1,4 @@
-# LAB Session 2: Set up our Kafka cluster on the cloud 
+# LAB Session 2: Kafka cluster on the cloud & Hands-on with Kafka
 ### Disclaimer: 
 
 __As part of your Confluent Cloud trial, you are provided with 400\$ in credits for use during the 30-day trial period.__ 
@@ -178,7 +178,7 @@ Some remarks: <ul><li>Use the `random` or similar functions/packages to generate
 
 | _Question 6_ |
 |------------|
-|Simulate a Kafka stream using the same logic as in Exercise 1: <ul><li>1. Create new Kafka topic in your Kafka cluster, name it as "log web" </li><li>2. Write Kafka producer, in which it will create a data stream with the same content of log as described in Exercise 1, then push this data stream to the topic "log web"</li><li>3. Write Kafka consumer, to consume the messages, and do the small computation to show some statistics of the data stream:</li><ul><li> Number of message received</li><li>Number of visitors</li><li>Average duration that a visitor stays at the web page (timestamp of 'home' - timestamp of 'close')| ---
+|Simulate a Kafka stream using the same logic as in Question 5: <ul><li>1. Create new Kafka topic in your Kafka cluster, name it as "log web" </li><li>2. Write Kafka producer, in which it will create a data stream with the same content of log as described in Exercise 1, then push this data stream to the topic "log web"</li><li>3. Write Kafka consumer, to consume the messages, and do the small computation to show some statistics of the data stream:</li><ul><li> Number of message received</li><li>Number of visitors</li><li>Average duration that a visitor stays at the web page (timestamp of 'home' - timestamp of 'close')| ---
 
 
 
